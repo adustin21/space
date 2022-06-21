@@ -1,0 +1,17 @@
+.container{
+	display: none;
+}
+
+@media screen and (max-width: 480px){
+.container{
+	position: relative;
+	z-index: 3;
+
+	display: block;
+
+	background: transparent;
+
+	outline: none;
+	border: none;
+}
+}

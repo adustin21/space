@@ -1,0 +1,68 @@
+.container{
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 41% 36.5% 1fr;
+	grid-template-columns: 1fr 41% 36.5% 1fr;
+	-ms-grid-rows: 136px auto 58.5vh auto;
+	grid-template-rows: 136px auto 58.5vh auto;
+	    grid-template-areas:
+	".	. 			. 		."
+	".	Header		. 		."
+	".	Description	CoverC	CoverC"
+	".	.			.		.";
+
+	height: 716px;
+	min-height: 100vh;
+
+
+	color: white;
+	text-transform: uppercase;
+
+	background-image:
+	url(./images/background-desktop.jpg);
+	background-size: cover;
+	background-position: center;
+}
+@media screen and (max-width: 1024px),
+(oriention: portrait) {
+	.container{
+		height: 870px;
+		-ms-grid-columns: 1fr 90% 1fr;
+		grid-template-columns: 1fr 90% 1fr;
+		-ms-grid-rows: 96px 104px -webkit-min-content 1fr;
+		-ms-grid-rows: 96px 104px min-content 1fr;
+		grid-template-rows: 96px 104px -webkit-min-content 1fr;
+		grid-template-rows: 96px 104px min-content 1fr;
+		    grid-template-areas:
+		".		. 				.		"
+		".		Header			.		"
+		"CoverC	CoverC			CoverC	"
+		".		Description		.		";
+
+		background-image:
+			url(./images/background-tablet.jpg);
+	}
+}
+@media screen and (max-width: 480px),
+(oriention: portrait) {
+	.container{
+		height: 750px;
+		-ms-grid-columns: 1fr 100% 1fr;
+		grid-template-columns: 1fr 100% 1fr;
+		-ms-grid-rows:
+		88px -webkit-min-content -webkit-min-content -webkit-min-content;
+		-ms-grid-rows:
+		88px min-content min-content min-content;
+		grid-template-rows:
+		88px -webkit-min-content -webkit-min-content -webkit-min-content;
+		grid-template-rows:
+		88px min-content min-content min-content;
+		    grid-template-areas:
+		".	. 				."
+		".	Header			."
+		".	CoverC			."
+		".	Description		.";
+		background-image:
+			url(./images/background-mobile.jpg);
+	}
+}

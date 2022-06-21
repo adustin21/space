@@ -1,0 +1,174 @@
+.container{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.planet{
+	background-color: black;
+	width: 20vh;
+	height: 20vh;
+
+	border-radius: 100%;
+
+	position: relative;
+	-webkit-box-shadow: 0 0 0 0 black;
+	        box-shadow: 0 0 0 0 black;
+	text-transform: uppercase;
+	text-align: center;
+	color: transparent;
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.container__failed .planet {
+	color: white;
+	background-color: transparent;
+}
+.orbit1, .orbit2{
+	width: 40vh;
+	height: 40vh;
+
+	position: absolute;
+
+	left: -10vh;
+	top: -10vh;
+
+	background-color: transparent;
+
+	border-radius: 100%;
+	outline: 3px dashed black;
+}
+.orbit2{
+	width: 30vh;
+	height: 30vh;
+
+	left: -5vh;
+	top: -5vh;
+
+}
+.moon1, .moon2 {
+	width: 5vh;
+	height: 5vh;
+
+	position: absolute;
+
+	left: 7.5vh;
+	top: 7.5vh;
+
+	background-color: black;
+
+	border-radius: 100%;
+
+	-webkit-animation: moonMovement1 4s linear infinite;
+
+	        animation: moonMovement1 4s linear infinite;
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.moon2{
+	-webkit-animation: moonMovement2 5s linear infinite;
+	        animation: moonMovement2 5s linear infinite;
+}
+.container__failed .moon1, .container__failed .moon2{
+	background-color: transparent;
+	-webkit-animation-play-state: paused;
+	        animation-play-state: paused;
+}
+@-webkit-keyframes moonMovement1 {
+	from { 	-webkit-transform: rotate(0deg) translateX(15vh) rotate(0deg); 	transform: rotate(0deg) translateX(15vh) rotate(0deg); }
+	to   {  -webkit-transform: rotate(360deg) translateX(15vh) rotate(-360deg);  transform: rotate(360deg) translateX(15vh) rotate(-360deg); }
+}
+@keyframes moonMovement1 {
+	from { 	-webkit-transform: rotate(0deg) translateX(15vh) rotate(0deg); 	transform: rotate(0deg) translateX(15vh) rotate(0deg); }
+	to   {  -webkit-transform: rotate(360deg) translateX(15vh) rotate(-360deg);  transform: rotate(360deg) translateX(15vh) rotate(-360deg); }
+}
+@-webkit-keyframes moonMovement2 {
+	from { 	-webkit-transform: rotate(360deg) translateX(20vh) rotate(-360deg); 	transform: rotate(360deg) translateX(20vh) rotate(-360deg); }
+	to   {  -webkit-transform: rotate(0deg) translateX(20vh) rotate(-0deg);  transform: rotate(0deg) translateX(20vh) rotate(-0deg); }
+}
+@keyframes moonMovement2 {
+	from { 	-webkit-transform: rotate(360deg) translateX(20vh) rotate(-360deg); 	transform: rotate(360deg) translateX(20vh) rotate(-360deg); }
+	to   {  -webkit-transform: rotate(0deg) translateX(20vh) rotate(-0deg);  transform: rotate(0deg) translateX(20vh) rotate(-0deg); }
+}
+
+@media screen and (orientation: portrait) {
+	.planet{
+		width: 20vw;
+		height: 20vw;
+	}
+	.orbit1, .orbit2{
+		width: 40vw;
+		height: 40vw;
+
+		left: -10vw;
+		top: -10vw;
+	}
+	.orbit2{
+		width: 30vw;
+		height: 30vw;
+
+		left: -5vw;
+		top: -5vw;
+
+	}
+	.moon1, .moon2 {
+		width: 5vw;
+		height: 5vw;
+
+		left: 7.5vw;
+		top: 7.5vw;
+
+		-webkit-animation: moonMovement1 4s linear infinite;
+
+		        animation: moonMovement1 4s linear infinite;
+	}
+	.moon2{
+		-webkit-animation: moonMovement2 5s linear infinite;
+		        animation: moonMovement2 5s linear infinite;
+	}
+	@-webkit-keyframes moonMovement1 {
+		from { 	-webkit-transform: rotate(0deg) translateX(15vw) rotate(0deg); 	transform: rotate(0deg) translateX(15vw) rotate(0deg); }
+		to   {  -webkit-transform: rotate(360deg) translateX(15vw) rotate(-360deg);  transform: rotate(360deg) translateX(15vw) rotate(-360deg); }
+	}
+	@keyframes moonMovement1 {
+		from { 	-webkit-transform: rotate(0deg) translateX(15vw) rotate(0deg); 	transform: rotate(0deg) translateX(15vw) rotate(0deg); }
+		to   {  -webkit-transform: rotate(360deg) translateX(15vw) rotate(-360deg);  transform: rotate(360deg) translateX(15vw) rotate(-360deg); }
+	}
+	@-webkit-keyframes moonMovement2 {
+		from { 	-webkit-transform: rotate(360deg) translateX(20vw) rotate(-360deg); 	transform: rotate(360deg) translateX(20vw) rotate(-360deg); }
+		to   {  -webkit-transform: rotate(0deg) translateX(20vw) rotate(-0deg);  transform: rotate(0deg) translateX(20vw) rotate(-0deg); }
+	}
+	@keyframes moonMovement2 {
+		from { 	-webkit-transform: rotate(360deg) translateX(20vw) rotate(-360deg); 	transform: rotate(360deg) translateX(20vw) rotate(-360deg); }
+		to   {  -webkit-transform: rotate(0deg) translateX(20vw) rotate(-0deg);  transform: rotate(0deg) translateX(20vw) rotate(-0deg); }
+	}
+}

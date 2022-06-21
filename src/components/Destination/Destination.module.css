@@ -1,0 +1,106 @@
+.container{
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 41% 36.5% 1fr;
+	grid-template-columns: 1fr 41% 36.5% 1fr;
+	-ms-grid-rows: 136px auto 41vw auto;
+	grid-template-rows: 136px auto 41vw auto;
+	    grid-template-areas:
+	". . 		. 			."
+	". Header	. 			."
+	". CoverC	Description ."
+	". . 		.			.";
+
+	height: 716px;
+	min-height: 100vh;
+
+
+	color: white;
+	text-transform: uppercase;
+
+	background-image:
+	url(./images/background-desktop.jpg);
+	background-size: cover;
+	background-position: center;
+}
+@media screen and (max-width: 1024px),
+(oriention: portrait) {
+	.container{
+		-ms-grid-columns: 1fr 90% 1fr;
+		grid-template-columns: 1fr 90% 1fr;
+		-ms-grid-rows: 96px 104px -webkit-min-content 1fr;
+		-ms-grid-rows: 96px 104px min-content 1fr;
+		grid-template-rows: 96px 104px -webkit-min-content 1fr;
+		grid-template-rows: 96px 104px min-content 1fr;
+		    grid-template-areas:
+		". . 			."
+		". Header		."
+		". CoverC		."
+		". Description 	.";
+
+		background-image:
+			url(./images/background-tablet.jpg);
+	}
+}
+@media screen and (max-width: 480px),
+(oriention: portrait) {
+	.container{
+		height: 875px;
+		-ms-grid-columns: 1fr 95% 1fr;
+		grid-template-columns: 1fr 95% 1fr;
+		-ms-grid-rows: 96px -webkit-min-content -webkit-min-content 1fr;
+		-ms-grid-rows: 96px min-content min-content 1fr;
+		grid-template-rows: 96px -webkit-min-content -webkit-min-content 1fr;
+		grid-template-rows: 96px min-content min-content 1fr;
+		background-image:
+			url(./images/background-mobile.jpg);
+	}
+	.container > *:nth-child(1){
+		-ms-grid-row: 1;
+		-ms-grid-column: 1;
+	}
+	.container > *:nth-child(2){
+		-ms-grid-row: 1;
+		-ms-grid-column: 2;
+	}
+	.container > *:nth-child(3){
+		-ms-grid-row: 1;
+		-ms-grid-column: 3;
+	}
+	.container > *:nth-child(4){
+		-ms-grid-row: 2;
+		-ms-grid-column: 1;
+	}
+	.container > *:nth-child(5){
+		-ms-grid-row: 2;
+		-ms-grid-column: 2;
+	}
+	.container > *:nth-child(6){
+		-ms-grid-row: 2;
+		-ms-grid-column: 3;
+	}
+	.container > *:nth-child(7){
+		-ms-grid-row: 3;
+		-ms-grid-column: 1;
+	}
+	.container > *:nth-child(8){
+		-ms-grid-row: 3;
+		-ms-grid-column: 2;
+	}
+	.container > *:nth-child(9){
+		-ms-grid-row: 3;
+		-ms-grid-column: 3;
+	}
+	.container > *:nth-child(10){
+		-ms-grid-row: 4;
+		-ms-grid-column: 1;
+	}
+	.container > *:nth-child(11){
+		-ms-grid-row: 4;
+		-ms-grid-column: 2;
+	}
+	.container > *:nth-child(12){
+		-ms-grid-row: 4;
+		-ms-grid-column: 3;
+	}
+}

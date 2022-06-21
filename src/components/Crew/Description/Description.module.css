@@ -1,0 +1,96 @@
+.container{
+	grid-area: Description;
+	justify-self: flex-start;
+	align-self: flex-end;
+
+	position: relative;
+
+	width: 85%;
+	height: 75%;
+}
+.container h4{
+	margin: 0;
+	color: #979797;
+}
+.container h3{
+	margin: 0.25em 0 0.3em;
+}
+.container p{
+	text-transform: none;
+}
+.container ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	position: absolute;
+	bottom: 0;
+
+	padding: 0;
+	cursor: pointer;
+}
+.container ul li{
+	list-style: none;
+
+	display: block;
+	width: 10px;
+	height: 10px;
+
+	background-color: #979797;
+
+	border-radius: 100%;
+
+	margin-right: 36px;
+}
+.container ul li.active{
+	background-color: white;
+}
+
+@media screen and (max-width: 1024px),
+(oriention: portrait) {
+	.container{
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		padding-bottom: 1em;
+		text-align: center;
+		-ms-grid-column-align: center;
+		    justify-self: center;
+		-ms-flex-item-align: start;
+		    align-self: flex-start;
+	}
+	.container ul{
+		width: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+	.container ul li{
+		margin: 0 1em;
+	}
+	.container h3{
+		margin: 5px 0 0px;
+		font-size: 40px;
+	}
+	.container p{
+		padding: 0 0 1.1em;
+	}
+}
+@media screen and (max-width: 480px){
+	.container{
+		height: auto;
+		margin-top: 32px;
+		padding-top: 6vh;
+	}
+	.container ul{
+		top: 0;
+		bottom: unset;
+		margin: 0;
+	}
+	.container p{
+		padding: 0;
+	}
+}
