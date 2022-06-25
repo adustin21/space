@@ -4,7 +4,7 @@ export enum E_Request {
 	technologies = "/technologies?populate=%2A"
 }
 
-export const SERVERURL = 'https://limitless-crag-33193.herokuapp.com'
+export const SERVERURL = `https://desolate-ocean-57849.herokuapp.com`
 const APIURL = `${SERVERURL}/api`
 
 export const API = async (request: E_Request) => {

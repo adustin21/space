@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import './App.css';
 import { useAppDispatch } from './app/hooks';
 import CrewWraper from './components/Crew/CrewWrapper';
@@ -31,6 +31,7 @@ function App() {
       <Route path='/destination' element={<DestinationWrapper />} />
       <Route path='/crew' element={<CrewWraper />} />
       <Route path='/technology' element={<TechnologyWraper />} />
+      <Route path='/*' element={<Navigate to={"/"} />} />
     </Routes>
     </Router>
     </div>
