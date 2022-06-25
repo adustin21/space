@@ -23,7 +23,7 @@ function CoverC(props: I_Props) {
 
 	}, [props.backgroundImageURL])
 	const resultUrl =
-		`url(${SERVERURL}${props.backgroundImageURL})`
+		`${props.backgroundImageURL})`
 
 	return <div
 			ref={backEl}
