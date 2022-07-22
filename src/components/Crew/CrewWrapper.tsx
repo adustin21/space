@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { selectCrew } from '../../features/crew/crewSlice'
 import { I_CrewItem } from '../../features/crew/types'
@@ -6,7 +6,6 @@ import Loader from '../Loader/Loader'
 import Crew from './Crew'
 
 function CrewWraper() {
-	console.log("crew render")
 	const state = useSelector(selectCrew)
 	const [index, setIndex] = useState(0)
 	const names = state.crew.map((el: I_CrewItem) => el.attributes.Name)

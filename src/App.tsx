@@ -11,6 +11,11 @@ import { fetchCrew } from './features/crew/crewSlice';
 import { fetchDestinations } from './features/destination/destinationSlice';
 import { fetchTechnologies } from './features/technologies/technologiesSlice';
 
+enum ClassMod{
+  mouse = "App__useMouse",
+  key = "App__useKey"
+}
+
 function App() {
   const [classMod, setClassMod] = useState(ClassMod.mouse)
   const dispatch = useAppDispatch()
@@ -18,7 +23,7 @@ function App() {
     dispatch(fetchDestinations())
     dispatch(fetchCrew())
     dispatch(fetchTechnologies())
-  }, [])
+  }, [dispatch])
   return (
     <div
     className={`App ${classMod}`}
@@ -38,8 +43,4 @@ function App() {
   );
 }
 
-enum ClassMod{
-  mouse = "App__useMouse",
-  key = "App__useKey"
-}
 export default App;

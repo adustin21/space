@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { selectDestination } from '../../features/destination/destinationSlice'
 import { I_DestinationItem } from '../../features/destination/types'

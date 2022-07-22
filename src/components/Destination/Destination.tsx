@@ -1,5 +1,4 @@
-import React, { MouseEventHandler, useState } from 'react'
-import { SERVERURL } from '../../api/API'
+import React from 'react'
 import { I_DestinationItem } from '../../features/destination/types'
 import CoverC from './Cover/Cover'
 import Description from './Description/Description'
