@@ -6,6 +6,7 @@ export interface I_TechnologyItem {
 		Name: string,
 	}
 }
+
 export interface I_TechnologyState {
 	status: "idle" | "loading" | "successed" | "failed"
 	technologies: I_TechnologyItem[]

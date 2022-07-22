@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import { SERVERURL } from '../../../api/API'
 import styles from './Cover.module.css'
 
 interface I_Props {
@@ -22,8 +21,6 @@ function CoverC(props: I_Props) {
 		}, 90)
 
 	}, [props.backgroundImageURL])
-	const resultUrl =
-		`${props.backgroundImageURL})`
 
 	return <div
 			ref={backEl}
