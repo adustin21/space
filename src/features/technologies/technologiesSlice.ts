@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import { API, E_Request } from "../../api/API"
 import { RootState } from "../../app/store"
-import { I_TechnologyState } from "./types"
+import { I_TechnologyItem, I_TechnologyState } from "./types"
 
 const initialState: I_TechnologyState = {
 	status: "idle",
@@ -9,7 +9,7 @@ const initialState: I_TechnologyState = {
 }
 export const fetchTechnologies = createAsyncThunk("technologies/fetch", async () => {
 	const result = await API(E_Request.technologies)
-	return result.data
+	return result.data as I_TechnologyItem[]
 })
 
 const technologiesSlice = createSlice({

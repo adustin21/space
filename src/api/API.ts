@@ -1,3 +1,10 @@
+import { I_CrewItem } from "../features/crew/types";
+import { I_DestinationItem } from "../features/destination/types";
+import { I_TechnologyItem } from "../features/technologies/types";
+import { crew } from "./offline/crew";
+import { destinations } from "./offline/destinations";
+import { technologies } from "./offline/technologies";
+
 export enum E_Request {
 	destinations = "/destinations?populate=%2A",
 	crew = "/crews?populate=%2A",
@@ -5,11 +12,20 @@ export enum E_Request {
 }
 
 export const SERVERURL = `https://desolate-ocean-57849.herokuapp.com`
-const APIURL = `${SERVERURL}/api`
 
-export const API = async (request: E_Request) => {
-	const req  = await fetch(APIURL+request)
-	const result = await req.json()
-	if (!result.data || result.data.length === 0) throw new Error()
-	return result
+export const API:
+(request: E_Request) => Promise<
+{data: I_DestinationItem[]} |
+{data: I_TechnologyItem[]} |
+{data: I_CrewItem[]}
+>
+ = async (request) => {
+	switch (request) {
+		case E_Request.destinations:
+			return ({data: destinations})
+		case E_Request.crew:
+			return ({data: crew})
+		case E_Request.technologies:
+			return ({data: technologies})
+	}
 }
