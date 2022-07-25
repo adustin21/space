@@ -36,17 +36,5 @@ export const destinations: I_DestinationItem[] = [
                 "url": "https://res.cloudinary.com/dyrmymiuq/image/upload/v1658513861/image_europa_89f3b74968.webp"
             }}}
         }
-    },
-    {
-        "id": 4,
-        "attributes": {
-            "Description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
-            "Distance": "1.6 BIL. km",
-            "Name": "TITAN",
-            "TravelTime": "7 years",
-			"Cover": {"data": {"attributes": {
-                "url": "https://res.cloudinary.com/dyrmymiuq/image/upload/v1658513861/image_titan_edb7fc9f47.webp"
-            }}}
-        }
     }
 ]
